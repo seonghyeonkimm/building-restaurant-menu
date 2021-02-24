@@ -11,5 +11,6 @@ generator client {
 model Menu {
   id        Int      @id @default(autoincrement())
   imageSrc  String
+  date      String
   createdAt DateTime @default(now())
 }
