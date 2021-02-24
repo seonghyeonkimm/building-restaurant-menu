@@ -1,4 +1,6 @@
-import { Card } from 'antd'
+import moment from 'moment'
+
+import TodayMenuCell from 'src/components/TodayMenuCell/TodayMenuCell'
 import BasicLayout from 'src/layouts/BasicLayout/BasicLayout'
 
 import styles from './HomePage.module.css'
@@ -7,13 +9,7 @@ const HomePage = () => {
   return (
     <BasicLayout>
       <div className={styles.container}>
-        <Card
-          bordered
-          title="2020-02-25(월)"
-          cover={
-            <img src="https://aptmtr-landing.s3.amazonaws.com/static/img/main/img_sevice1.jpg" />
-          }
-        />
+        <TodayMenuCell date={moment().format('YYYY-MM-DD')} />
       </div>
     </BasicLayout>
   )

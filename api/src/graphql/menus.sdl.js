@@ -9,6 +9,7 @@ export const schema = gql`
   type Query {
     menus: [Menu!]!
     menu(id: Int!): Menu
+    todayMenu(date: String!): Menu
   }
 
   input CreateMenuInput {

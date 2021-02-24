@@ -11,6 +11,12 @@ export const menu = ({ id }) => {
   })
 }
 
+export const todayMenu = ({ date }) => {
+  return db.menu.findUnique({
+    where: { date },
+  })
+}
+
 export const createMenu = ({ input }) => {
   requireAuth()
   return db.menu.create({

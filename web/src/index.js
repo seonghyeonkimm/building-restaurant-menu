@@ -1,9 +1,9 @@
 import { AuthProvider } from '@redwoodjs/auth'
 import netlifyIdentity from 'netlify-identity-widget'
 import ReactDOM from 'react-dom'
-
 import { FatalErrorBoundary } from '@redwoodjs/web'
 import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
+import moment from 'moment'
 
 import FatalErrorPage from 'src/pages/FatalErrorPage'
 import Routes from 'src/Routes'
@@ -12,6 +12,7 @@ import './scaffold.css'
 import 'antd/dist/antd.css'
 import './index.css'
 
+moment.locale('ko')
 netlifyIdentity.init()
 
 ReactDOM.render(
