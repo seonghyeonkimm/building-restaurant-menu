@@ -4,8 +4,8 @@ export const QUERY = gql`
   query FIND_MENU_BY_ID($id: Int!) {
     menu: menu(id: $id) {
       id
+      title
       imageSrc
-      date
       createdAt
     }
   }

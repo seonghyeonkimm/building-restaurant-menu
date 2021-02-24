@@ -2,18 +2,12 @@ import { requireAuth } from 'src/lib/auth'
 import { db } from 'src/lib/db'
 
 export const menus = () => {
-  return db.menu.findMany()
+  return db.menu.findMany({ orderBy: { id: 'desc' }, take: 10 })
 }
 
 export const menu = ({ id }) => {
   return db.menu.findUnique({
     where: { id },
-  })
-}
-
-export const todayMenu = ({ date }) => {
-  return db.menu.findUnique({
-    where: { date },
   })
 }
 

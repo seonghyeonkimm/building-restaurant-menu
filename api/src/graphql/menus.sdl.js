@@ -1,25 +1,24 @@
 export const schema = gql`
   type Menu {
     id: Int!
+    title: String!
     imageSrc: String!
-    date: String!
     createdAt: DateTime!
   }
 
   type Query {
     menus: [Menu!]!
     menu(id: Int!): Menu
-    todayMenu(date: String!): Menu
   }
 
   input CreateMenuInput {
+    title: String!
     imageSrc: String!
-    date: String!
   }
 
   input UpdateMenuInput {
+    title: String
     imageSrc: String
-    date: String
   }
 
   type Mutation {

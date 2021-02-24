@@ -6,8 +6,8 @@ export const QUERY = gql`
   query MENUS {
     menus {
       id
+      title
       imageSrc
-      date
       createdAt
     }
   }

@@ -61,12 +61,12 @@ const Menu = ({ menu }) => {
               <td>{menu.id}</td>
             </tr>
             <tr>
-              <th>Image src</th>
-              <td>{menu.imageSrc}</td>
+              <th>Title</th>
+              <td>{menu.title}</td>
             </tr>
             <tr>
-              <th>Date</th>
-              <td>{menu.date}</td>
+              <th>Image src</th>
+              <td>{menu.imageSrc}</td>
             </tr>
             <tr>
               <th>Created at</th>

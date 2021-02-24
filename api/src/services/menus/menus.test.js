@@ -15,21 +15,21 @@ describe('menus', () => {
 
   scenario('creates a menu', async (scenario) => {
     const result = await createMenu({
-      input: { imageSrc: 'String', date: 'String' },
+      input: { title: 'String', imageSrc: 'String' },
     })
 
+    expect(result.title).toEqual('String')
     expect(result.imageSrc).toEqual('String')
-    expect(result.date).toEqual('String')
   })
 
   scenario('updates a menu', async (scenario) => {
     const original = await menu({ id: scenario.menu.one.id })
     const result = await updateMenu({
       id: original.id,
-      input: { imageSrc: 'String2' },
+      input: { title: 'String2' },
     })
 
-    expect(result.imageSrc).toEqual('String2')
+    expect(result.title).toEqual('String2')
   })
 
   scenario('deletes a menu', async (scenario) => {

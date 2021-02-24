@@ -6,8 +6,8 @@ export const QUERY = gql`
   query FIND_MENU_BY_ID($id: Int!) {
     menu: menu(id: $id) {
       id
+      title
       imageSrc
-      date
       createdAt
     }
   }
@@ -16,8 +16,8 @@ const UPDATE_MENU_MUTATION = gql`
   mutation UpdateMenuMutation($id: Int!, $input: UpdateMenuInput!) {
     updateMenu(id: $id, input: $input) {
       id
+      title
       imageSrc
-      date
       createdAt
     }
   }

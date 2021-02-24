@@ -62,8 +62,8 @@ const MenusList = ({ menus }) => {
         <thead>
           <tr>
             <th>Id</th>
+            <th>Title</th>
             <th>Image src</th>
-            <th>Date</th>
             <th>Created at</th>
             <th>&nbsp;</th>
           </tr>
@@ -72,8 +72,8 @@ const MenusList = ({ menus }) => {
           {menus.map((menu) => (
             <tr key={menu.id}>
               <td>{truncate(menu.id)}</td>
+              <td>{truncate(menu.title)}</td>
               <td>{truncate(menu.imageSrc)}</td>
-              <td>{truncate(menu.date)}</td>
               <td>{timeTag(menu.createdAt)}</td>
               <td>
                 <nav className="rw-table-actions">

@@ -1,6 +1,6 @@
 export const standard = defineScenario({
   menu: {
-    one: { imageSrc: 'String', date: 'String' },
-    two: { imageSrc: 'String', date: 'String' },
+    one: { title: 'String', imageSrc: 'String' },
+    two: { title: 'String', imageSrc: 'String' },
   },
 })
