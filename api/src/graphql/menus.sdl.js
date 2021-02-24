@@ -2,6 +2,7 @@ export const schema = gql`
   type Menu {
     id: Int!
     imageSrc: String!
+    date: String!
     createdAt: DateTime!
   }
 
@@ -12,10 +13,12 @@ export const schema = gql`
 
   input CreateMenuInput {
     imageSrc: String!
+    date: String!
   }
 
   input UpdateMenuInput {
     imageSrc: String
+    date: String
   }
 
   type Mutation {

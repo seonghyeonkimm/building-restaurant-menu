@@ -63,6 +63,7 @@ const MenusList = ({ menus }) => {
           <tr>
             <th>Id</th>
             <th>Image src</th>
+            <th>Date</th>
             <th>Created at</th>
             <th>&nbsp;</th>
           </tr>
@@ -72,6 +73,7 @@ const MenusList = ({ menus }) => {
             <tr key={menu.id}>
               <td>{truncate(menu.id)}</td>
               <td>{truncate(menu.imageSrc)}</td>
+              <td>{truncate(menu.date)}</td>
               <td>{timeTag(menu.createdAt)}</td>
               <td>
                 <nav className="rw-table-actions">

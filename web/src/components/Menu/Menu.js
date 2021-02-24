@@ -65,6 +65,10 @@ const Menu = ({ menu }) => {
               <td>{menu.imageSrc}</td>
             </tr>
             <tr>
+              <th>Date</th>
+              <td>{menu.date}</td>
+            </tr>
+            <tr>
               <th>Created at</th>
               <td>{timeTag(menu.createdAt)}</td>
             </tr>

@@ -38,6 +38,22 @@ const MenuForm = (props) => {
         />
         <FieldError name="imageSrc" className="rw-field-error" />
 
+        <Label
+          name="date"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Date
+        </Label>
+        <TextField
+          name="date"
+          defaultValue={props.menu?.date}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: true }}
+        />
+        <FieldError name="date" className="rw-field-error" />
+
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
             Save

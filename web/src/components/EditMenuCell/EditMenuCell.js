@@ -7,6 +7,7 @@ export const QUERY = gql`
     menu: menu(id: $id) {
       id
       imageSrc
+      date
       createdAt
     }
   }
@@ -16,6 +17,7 @@ const UPDATE_MENU_MUTATION = gql`
     updateMenu(id: $id, input: $input) {
       id
       imageSrc
+      date
       createdAt
     }
   }

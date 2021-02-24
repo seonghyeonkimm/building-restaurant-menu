@@ -15,10 +15,11 @@ describe('menus', () => {
 
   scenario('creates a menu', async (scenario) => {
     const result = await createMenu({
-      input: { imageSrc: 'String' },
+      input: { imageSrc: 'String', date: 'String' },
     })
 
     expect(result.imageSrc).toEqual('String')
+    expect(result.date).toEqual('String')
   })
 
   scenario('updates a menu', async (scenario) => {
