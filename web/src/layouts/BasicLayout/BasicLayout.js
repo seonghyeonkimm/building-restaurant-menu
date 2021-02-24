@@ -4,7 +4,7 @@ import { useRef } from 'react'
 
 import styles from './BasicLayout.module.css'
 
-const BasicLayout = ({ children }) => {
+const Header = () => {
   const buttonRef = useRef()
   const { logIn, logOut, isAuthenticated } = useAuth()
   const handleLogout = () => {
@@ -19,21 +19,27 @@ const BasicLayout = ({ children }) => {
   }
 
   return (
+    <Layout.Header className={styles.header}>
+      <Typography.Title level={3} className={styles.title}>
+        오늘의 메뉴
+      </Typography.Title>
+      <Button
+        type="text"
+        size="large"
+        ref={buttonRef}
+        className={styles.rightButton}
+        onClick={isAuthenticated ? handleLogout : logIn}
+      >
+        {isAuthenticated ? '로그아웃' : '로그인'}
+      </Button>
+    </Layout.Header>
+  )
+}
+
+const BasicLayout = ({ children }) => {
+  return (
     <Layout className={styles.layout}>
-      <Layout.Header className={styles.header}>
-        <Typography.Title level={3} className={styles.title}>
-          오늘의 메뉴
-        </Typography.Title>
-        <Button
-          type="text"
-          size="large"
-          ref={buttonRef}
-          className={styles.rightButton}
-          onClick={isAuthenticated ? handleLogout : logIn}
-        >
-          {isAuthenticated ? '로그아웃' : '로그인'}
-        </Button>
-      </Layout.Header>
+      <Header />
       <Layout.Content>{children}</Layout.Content>
     </Layout>
   )
