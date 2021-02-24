@@ -1,5 +1,5 @@
 .layout {
-  @apply h-full;
+  @apply h-full bg-white;
 }
 
 .header {

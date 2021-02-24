@@ -10,7 +10,6 @@ import Routes from 'src/Routes'
 
 import 'antd/dist/antd.css'
 import './index.css'
-import './scaffold.css'
 
 netlifyIdentity.init()
 

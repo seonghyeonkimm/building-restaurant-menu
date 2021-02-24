@@ -1,17 +1,20 @@
-import { Link, routes } from '@redwoodjs/router'
+import { Card } from 'antd'
 import BasicLayout from 'src/layouts/BasicLayout/BasicLayout'
+
+import styles from './HomePage.module.css'
 
 const HomePage = () => {
   return (
     <BasicLayout>
-      <h1>HomePage</h1>
-      <p>
-        Find me in <code>./web/src/pages/HomePage/HomePage.js</code>
-      </p>
-      <p>
-        My default route is named <code>home</code>, link to me with `
-        <Link to={routes.home()}>Home</Link>`
-      </p>
+      <div className={styles.container}>
+        <Card
+          bordered
+          title="2020-02-25(월)"
+          cover={
+            <img src="https://aptmtr-landing.s3.amazonaws.com/static/img/main/img_sevice1.jpg" />
+          }
+        />
+      </div>
     </BasicLayout>
   )
 }
