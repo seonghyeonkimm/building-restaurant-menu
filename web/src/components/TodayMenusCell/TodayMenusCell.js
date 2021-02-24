@@ -27,7 +27,7 @@ export const Loading = () => {
 
   return (
     <div className={styles.textCenter}>
-      <Spin />
+      <Spin size="large" />
     </div>
   )
 }
