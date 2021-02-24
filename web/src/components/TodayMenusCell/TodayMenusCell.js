@@ -44,7 +44,7 @@ export const Failure = ({ error }) => <div>Error: {error.message}</div>
 
 export const Success = ({ menus }) => {
   return (
-    <Space direction="vertical">
+    <Space direction="vertical" className={styles.space}>
       {menus.map((menu) => {
         return (
           <Card
