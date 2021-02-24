@@ -1,0 +1,23 @@
+.layout {
+  @apply h-full;
+}
+
+.header {
+  @apply flex items-center justify-between;
+}
+
+h3.title {
+  @apply text-white m-0;
+}
+
+.avatar {
+  @apply bg-gray-400;
+}
+
+.rightButton {
+  @apply
+    text-white
+    focus:text-gray-400
+    hover:text-gray-400
+  ;
+}

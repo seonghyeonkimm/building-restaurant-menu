@@ -5,7 +5,11 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "css.validate": false,
   "[prisma]": {
     "editor.formatOnSave": true
+  },
+  "editor.quickSuggestions": {
+    "strings": true
   }
 }
