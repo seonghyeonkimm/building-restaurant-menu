@@ -6,7 +6,7 @@ import styles from './BasicLayout.module.css'
 
 const BasicLayout = ({ children }) => {
   const buttonRef = useRef()
-  const { currentUser, logIn, logOut, isAuthenticated } = useAuth()
+  const { logIn, logOut, isAuthenticated } = useAuth()
   const handleLogout = () => {
     if (!window.confirm('로그아웃하시겠습니까?')) {
       return
@@ -31,7 +31,7 @@ const BasicLayout = ({ children }) => {
           className={styles.rightButton}
           onClick={isAuthenticated ? handleLogout : logIn}
         >
-          {isAuthenticated ? `로그아웃 (${currentUser.email})` : '로그인'}
+          {isAuthenticated ? '로그아웃' : '로그인'}
         </Button>
       </Layout.Header>
       <Layout.Content>{children}</Layout.Content>

@@ -1,5 +1,7 @@
 import moment from 'moment'
-import { Card } from 'antd'
+import { Card, Spin } from 'antd'
+
+import styles from './TodayMenuCell.module.css'
 
 export const QUERY = gql`
   query FIND_MENU_BY_ID($date: String!) {
@@ -12,7 +14,15 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = ({ date }) => {
+  return (
+    <Card bordered title={moment(date).format('YYYY-MM-DD (ddd)')}>
+      <div className={styles.loading}>
+        <Spin />
+      </div>
+    </Card>
+  )
+}
 
 export const Empty = ({ date }) => {
   return (
